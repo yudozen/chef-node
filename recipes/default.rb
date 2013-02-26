@@ -9,6 +9,7 @@
 
 git "/tmp/node" do
 	repository "git://github.com/joyent/node.git"
+	reference "v0.8.21"
 	reference "master"
 	action :sync
 end
