@@ -14,7 +14,7 @@ git "/tmp/node" do
 end
 
 bash "install_node" do
-	not_if 'chich node'
+	not_if 'which node'
 	user "root"
 	cwd "/tmp/node"
 	code <<-EOH
