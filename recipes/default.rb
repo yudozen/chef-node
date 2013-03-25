@@ -14,9 +14,13 @@ git "/tmp/node" do
 end
 
 bash "install_node" do
+	not_if 'chich node'
 	user "root"
 	cwd "/tmp/node"
 	code <<-EOH
 		(./configure && make && make install)	
+		npm install redis
 	EOH
 end
+
+
